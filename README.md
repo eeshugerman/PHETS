@@ -165,7 +165,7 @@ filt_params.update({
     'ds_rate': 20
 })
 
-plot_l2rocs(
+plot_rocs(
     traj1, traj2,
     'clarinet', 'viol',
     'output/demo/ROCs.png',

@@ -39,12 +39,8 @@ def load_filts(load_saved, fid):
 		return np.load(default_fname(fid))
 
 
-def save_filts(save, fid, filts):
-	try:
-		np.save(save, filts)
-	except AttributeError:
-		np.save(default_fname(fid), filts)
-
+def save_filts(fid, filts):
+	np.save(default_fname(fid), filts)
 
 def status_string(vp1, vp2, i, j):
 	str = None

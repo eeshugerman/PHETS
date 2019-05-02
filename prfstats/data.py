@@ -166,7 +166,7 @@ def filt_set(
 	filts = np.squeeze(filts_vv)
 
 	if save:
-		save_filts(save, fid, filts)
+		save_filts(fid, filts)
 
 	return filts
 
@@ -176,7 +176,7 @@ def prf_set(filts, weight_func=lambda i, j: 1, vp1=None, vp2=None):
 	for idx, filt in np.ndenumerate(filts):
 		prfs[idx] = NormalPRF(filt.prf())
 		prfs[idx].set_weight(weight_func)
-		
+
 	lvp1 = len(vp1[1]) if vp1 is not None else None
 	lvp2 = len(vp2[1]) if vp2 is not None else None
 	depth = filts.shape[-1]
