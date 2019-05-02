@@ -60,9 +60,11 @@ pip install -r requirements.txt
 import numpy as np
 from signals import TimeSeries
 from utilities import idx_to_freq
-from DCE.movies import slide_window
-from PH import Filtration
+from embed.movies import slide_window
+from phomology import Filtration
+from prfstats import plot_rocs
 from config import default_filtration_params as filt_params
+
 
 ts = TimeSeries(
     'datasets/time_series/C135B/49-C135B.txt',
